@@ -1,0 +1,63 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure canvas fills window without scrollbars */
+  background: #000; /* Fallback while image loads */
+  cursor: crosshair; /* Crosshair cursor like in the GIF */
+}
+
+#world-canvas {
+  display: block; /* Remove inline gaps */
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair; /* Crosshair cursor for targeting */
+}
+
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+
+#connection-status {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#connection-status.connected {
+  color: #4CAF50;
+}
+
+#connection-status.error {
+  color: #f44336;
+}
+
+#connection-status.disconnected {
+  color: #ff9800;
+}
+
+#player-count {
+  margin-bottom: 5px;
+}
+
+#position {
+  margin-bottom: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+#instructions {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+
